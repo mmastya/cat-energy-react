@@ -1,0 +1,215 @@
+.example-list {
+    display: flex;
+    margin: 0;
+    padding-top: 25px;
+    padding-left: 0;
+    background-color: #f2f2f2;
+    list-style: none;
+  }
+  
+  .example-list__item {
+    max-width: 102px;
+    padding: 6px 20px 0;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    margin-right: 32px;
+  
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+  
+  .example-list__item-wrapper {
+    max-width: 105px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -20px;
+    padding-top: 6px;
+    background: #f2f2f2;
+  }
+  
+  .example-list__parameter {
+    margin: 0;
+    padding-left: 22px;
+    padding-top: 0;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "Oswald Regular", "Arial", sans-serif;
+    color: #111111;
+    text-transform: uppercase;
+  
+    &--weight {
+      width: 39px;
+    }
+  
+    &--days {
+      width: 83px;
+      padding-right: 0;
+      padding-left: 0;
+      padding-top: 0;
+    }
+  }
+  
+  .example-list__text {
+    width: 82px;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 12px;
+    font-family: "Arial Regular", "Arial", sans-serif;
+    color: #444444;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .example-list {
+      padding-top: 53px;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-bottom: 19px;
+      background-color: #ffffffff;
+    }
+  
+    .example-list__wrapper {
+      display: flex;
+    }
+  
+    .example-list__item {
+      padding: 23px 29px 20px;
+      width: 162px;
+      text-align: center;
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      margin-right: 42px;
+  
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }
+  
+    .example-list__item-wrapper {
+      width: inherit;
+      padding: 0;
+      margin-bottom: -25px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 6px;
+      background: #ffffff;
+    }
+  
+    .example-list__parameter {
+      padding-top: 0;
+      padding-left: 27px;
+      font-size: 30px;
+      line-height: 37px;
+  
+      &--weight {
+        width: 48px;
+        margin-top: -14px;
+        padding-right: 57px;
+      }
+  
+      &--days {
+        width: 102px;
+        margin-top: -13px;
+        padding-right: 30px;
+        padding-left: 0;
+      }
+    }
+  
+    .example-list__text {
+      width: 118px;
+      margin-left: -9px;
+      padding-left: 0;
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 14px;
+      background: #ffffff;
+  
+      &--time {
+        width: 145px;
+        padding-left: 0;
+        margin-left: -22px;
+      }
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    .example-list {
+      padding-top: 68px;
+      padding-right: 30px;
+      padding-left: 33px;
+      padding-bottom: 19px;
+      background-color: #f2f2f2;
+    }
+  
+    .example-list__wrapper {
+      display: flex;
+      flex-direction: column;
+      background-color: #f2f2f2;
+    }
+  
+    .example-list__item-wrapper {
+      width: inherit;
+      padding: 0;
+      margin-bottom: -25px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 6px;
+      background-color: #f2f2f2;
+    }
+  
+    .example-list__item {
+      padding: 23px 29px 20px;
+      width: 162px;
+      text-align: center;
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      margin-right: 42px;
+      background-color: #f2f2f2;
+  
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }
+  
+    .example-list__parameter {
+      padding-top: 0;
+      padding-left: 25px;
+      font-size: 30px;
+      line-height: 37px;
+      background-color: #f2f2f2;
+  
+      &--weight {
+        width: 48px;
+        padding-right: 57px;
+      }
+  
+      &--days {
+        width: 102px;
+        padding-right: 27px;
+        padding-left: 0;
+        margin-left: -1px;
+        margin-top: -15px;
+      }
+    }
+  
+    .example-list__text {
+      width: 99px;
+      padding-left: 10px;
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 14px;
+      background-color: #f2f2f2;
+  
+      &--time {
+        width: 148px;
+        padding-left: 0;
+        padding-top: 11px;
+        margin-left: -24px;
+      }
+    }
+  }
+  

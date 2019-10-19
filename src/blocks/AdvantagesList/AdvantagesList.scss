@@ -1,0 +1,28 @@
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0;
+    background-color: white;
+    list-style: none;
+  }
+  
+  @media (min-width: 768px) {
+    .advantages-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 708px;
+      margin: 0;
+      padding-bottom: 45px;
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    .advantages-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 1220px;
+    }
+  }
+  

@@ -1,0 +1,49 @@
+.catalog {
+    width: 320px;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+  
+  .catalog__title {
+    width: 280px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 28px;
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: normal;
+    font-family: "Oswald Regular", "Arial", sans-serif;
+    color: #111111;
+    border-top: 1px solid #e6e6e6;
+  }
+  
+  @media (min-width: 768px) {
+    .catalog {
+      width: 708px;
+    }
+  
+    .catalog__title {
+      width: 708px;
+      margin: 0;
+      margin-top: 48px;
+      padding: 0;
+      margin-bottom: 165px;
+      font-size: 60px;
+      line-height: 60px;
+      border-top: none;
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    .catalog {
+      width: 1220px;
+    }
+  
+    .catalog__title {
+      width: 1220px;
+      margin-top: 66px;
+    }
+  }
+  

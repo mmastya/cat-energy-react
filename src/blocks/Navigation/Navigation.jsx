@@ -1,27 +1,45 @@
 import React from "react";
-import "./Navigation.css";
+import "./Navigation.scss";
+import { Link } from "react-router-dom";
 
-function Navigation() {
+export function Navigation(props) {
+
+    let normalLinkMain = "site-list__item-link";
+    if (props.activeLinkMain) {
+        normalLinkMain += " site-list__item-link--active site-list__item-link--white site-list__item-link--white-active";
+    }
+
+    let normalLinkCatalog = "site-list__item-link";
+    if (props.activeLinkCatalog) {
+        normalLinkCatalog += " site-list__item-link--active";
+    }
+
+    let normalLinkForm = "site-list__item-link";
+    if (props.activeLinkForm) {
+        normalLinkForm += " site-list__item-link--active";
+    }
+
+    let whitelLink = "site-list__item-link";
+    if (props.linkWhite) {
+        whitelLink += " site-list__item-link--white";
+    }
+
     return (
-        <div>
-            <nav class="main-nav main-nav--closed main-nav--nojs">
-                <button class="main-nav__toggle" type="button"></button>
-                <div class="main-nav__wrapper">
-                    <ul class="main-nav__list site-list">
-                        <li class="site-list__item">
-                            <a class="site-list__item-link site-list__item-link--active site-list__item-link--white site-list__item-link--white-active" href="./index.html">Главная</a>
-                        </li>
-                        <li class="site-list__item">
-                            <a class="site-list__item-link site-list__item-link--white" href="./catalog.html">Каталог продукции</a>
-                        </li>
-                        <li class="site-list__item">
-                            <a class="site-list__item-link site-list__item-link--white" href="./form.html">Подбор программы</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        <nav className="main-nav main-nav--closed main-nav--nojs">
+            <button className="main-nav__toggle" type="button"></button>
+            <div className="main-nav__wrapper">
+                <ul className="main-nav__list site-list">
+                    <li className="site-list__item">
+                        <Link className={ normalLinkMain } to="/">Главная</Link>
+                    </li>
+                    <li className="site-list__item">
+                        <Link className={`${normalLinkCatalog} ${whitelLink}`} to="/catalog">Каталог продукции</Link>
+                    </li>
+                    <li className="site-list__item">
+                        <Link className={`${normalLinkForm} ${whitelLink}`} to="/form">Подбор программы</Link>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     );
 }
-
-export default Navigation;

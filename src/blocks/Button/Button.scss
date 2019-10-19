@@ -1,0 +1,80 @@
+.button {
+  width: 280px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  color: #ffffff;
+  background-color: #68b738;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: #8fc46e;
+  }
+
+  &--program-selection {
+    margin: 0 auto;
+    margin-bottom: 23px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 247px;
+
+    &--form {
+      width: 284px;
+      padding-top: 15px;
+      padding-bottom: 17px;
+      font-size: 20px;
+    }
+
+    &--catalog {
+      width: 634px;
+      margin-left: 37px;
+    }
+
+    &--program-selection {
+      position: absolute;
+      top: -20px;
+      width: 245px;
+      margin-left: 118px;
+      margin-right: 0;
+      padding: 17px 0;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .button {
+    width: 170px;
+
+    &--form {
+      width: 570px;
+    }
+
+    &--catalog {
+      width: 244px;
+      margin: 0;
+    }
+
+    &--program-selection {
+      top: 32px;
+      width: 245px;
+      margin-left: 80px;
+      font-size: 20px;
+      margin-top: -49px;
+    }
+  }
+}

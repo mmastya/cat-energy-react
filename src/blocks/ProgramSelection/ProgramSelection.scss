@@ -1,0 +1,152 @@
+.program-selection {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .program-selection__header {
+    min-width: 320px;
+    margin-bottom: -2px;
+    background-image: url("./image/index-background-mobile@1x.jpg");
+    background-color: #5eaa2f;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("./image/index-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
+  }
+  
+  .program-selection__header-wrapper {
+    width: 320px;
+    margin: 0 auto;
+  }
+  
+  .program-selection__intro {
+    text-align: center;
+    margin: 0;
+    margin-top: 0;
+    padding-top: 27px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+    font-family: "Oswald Regular", "Arial", sans-serif;
+    color: #ffffff;
+  }
+  
+  .program-selection__slogan {
+    text-align: center;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 167px;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: "Oswald Regular", "Arial", sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  .program-selection__image {
+    display: block;
+    margin: 0 auto;
+    margin-top: -137px;
+  }
+  
+  .program-selection__selection-link {
+    text-decoration: none;
+  }
+  
+  @media (min-width: 768px) {
+    .program-selection {
+      min-width: 768px;
+      margin: 0 auto;
+    }
+  
+    .program-selection__header-wrapper {
+      position: relative;
+      width: 768px;
+    }
+  
+    .program-selection__header {
+      min-width: 768px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      background-image: none;
+      background-color: #ffffff;
+    }
+  
+    .program-selection__intro {
+      width: 415px;
+      text-align: left;
+      margin-left: 118px;
+      padding-top: 35px;
+      font-size: 60px;
+      line-height: 58px;
+      color: #111111;
+    }
+  
+    .program-selection__slogan {
+      text-align: left;
+      width: 283px;
+      margin-left: 118px;
+      margin-right: 0;
+      padding-top: 42px;
+      padding-bottom: 69px;
+      font-size: 20px;
+      line-height: 20px;
+      color: #111111;
+    }
+  
+    .program-selection__image {
+      width: 712px;
+      height: auto;
+      margin-top: -50px;
+      margin-left: 27px;
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    .program-selection {
+      width: 1220px;
+      margin-bottom: 73px;
+    }
+  
+    .program-selection__header-wrapper {
+      position: relative;
+      width: 1220px;
+    }
+  
+    .program-selection__header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+      background: transparent;
+    }
+  
+    .program-selection__image {
+      position: absolute;
+      left: 451px;
+      top: -331px;
+      z-index: 2;
+      display: block;
+      order: 1;
+      width: 550px;
+      margin: 0;
+      background-color: transparent;
+    }
+  
+    .program-selection__intro {
+      margin: 0;
+      padding-top: 85px;
+      padding-left: 80px;
+    }
+  
+    .program-selection__slogan {
+      margin-left: 0;
+      padding-left: 81px;
+      padding-top: 45px;
+    }
+  }
+  

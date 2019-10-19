@@ -1,0 +1,126 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+  }
+  
+  .page-footer__contacts-wrapper {
+    min-width: 320px;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  
+  
+  .page-footer__map {
+    position: relative;
+    width: 100%;
+    border: none;
+  }
+  
+  .page-footer__bottom {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 23px;
+  }
+  
+  .page-footer__bottom-logo {
+    display: block;
+    width: 280px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: center;
+  
+    &:hover {
+      opacity: 0.8;
+    }
+  
+    &:active {
+      opacity: 0.4;
+    }
+  }
+  
+  .page-footer__contacts-wrapper-desktop {
+    background-color: #ffffff;
+  
+    &--bc-grey {
+      background-color: #f2f2f2;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .page-footer {
+      position: relative;
+      min-width: 768px;
+    }
+  
+    .page-footer__bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 43px;
+      padding-top: 36px;
+      width: 708px;
+      background-color: #f2f2f2;
+    }
+  
+    .page-footer__bottom-logo {
+      margin: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 9px;
+      border-bottom: none;
+      text-align: inherit;
+    }
+  
+    .page-footer__contacts-wrapper-desktop {
+      background-color: #ffffff;
+  
+      &--bc-grey {
+        background-color: #f2f2f2;
+      }
+    }
+  
+    .page-footer__map {
+      height: 400px;
+      min-width: 768px;
+      width: 100%;
+      border: none;
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    .page-footer {
+      position: relative;
+      width: 100%;
+    }
+  
+    .page-footer__contacts-wrapper-desktop {
+      width: 1220px;
+      margin: 0 auto;
+      z-index: 1;
+      background-color: transparent;
+    }
+  
+    .page-footer__map {
+      position: absolute;
+      width: 100%;
+    }
+  
+    .page-footer__bottom {
+      width: 1220px;
+      margin: 0 auto;
+      margin-top: 106px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  

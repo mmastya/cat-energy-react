@@ -1,13 +1,15 @@
 import React from "react";
-import "./Form.css";
-import Header from "../../blocks/Header/Header.jsx";
+import "./Form.scss";
+import { Header } from "../../blocks/Header/Header.jsx";
+import { Questionnaire } from "../../blocks/Questionnaire/Questionnaire.jsx";
+import { Footer } from "../../blocks/Footer/Footer.jsx";
 
-function Form() {
+export function Form() {
     return (
         <div>
-            <Header />
+            <Header form={true}/>
+            <Questionnaire />
+            <Footer contactsWrapGray={true} bcGray={true}/>
         </div>
     );
 }
-
-export default Form;
