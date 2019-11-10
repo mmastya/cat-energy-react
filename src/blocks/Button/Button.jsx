@@ -1,17 +1,18 @@
 import React from "react";
 import "./Button.scss";
 
-export function Button (props) {
+export function Button ({name, btnClassPL, btnProdList, ...other}) {
+    console.log(other);
     let btnClassProgSec = "button";
-    if (props.btnClassPL) {
+    if (btnClassPL) {
         btnClassProgSec += " button--program-selection";
     }
 
     let btnClassProdList = "button";
-    if (props.btnProdList) {
+    if (btnProdList) {
         btnClassProdList += " button--catalog"
     }
     return (
-        <div className={ `${btnClassProgSec} ${btnClassProdList}` }>{props.name}</div>
+        <div className={ `${btnClassProgSec} ${btnClassProdList}`} {...other}>{name}</div>
     );
 }
