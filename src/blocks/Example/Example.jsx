@@ -21,7 +21,6 @@ export function Example() {
     }
 
     useEffect(() => {
-      console.log(runnerEl.current);
 
       // componentDidMount
 

@@ -2,7 +2,6 @@ import React from "react";
 import "./Button.scss";
 
 export function Button ({name, btnClassPL, btnProdList, ...other}) {
-    console.log(other);
     let btnClassProgSec = "button";
     if (btnClassPL) {
         btnClassProgSec += " button--program-selection";

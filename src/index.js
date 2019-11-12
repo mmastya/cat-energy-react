@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import "./XmlHttpRequest";
 import { App } from './App';
 import * as serviceWorker from './serviceWorker';
-
-console.log(App);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
