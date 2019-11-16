@@ -1,4 +1,4 @@
-/* let xhrPromise = new Promise(function(resolve, reject) {
+ /* let xhrPromise = new Promise(function(resolve, reject) {
   let xhr = new XMLHttpRequest();
   console.log("это происходит до отправки запроса", new Date().getTime());
 
@@ -16,7 +16,7 @@
     let responseObj = xhr.response;
     resolve(responseObj);
   };
-  console.log("ответ с сервера получен", new Date().getTime());
+  console.log("вывод ответа с сервера получен", new Date().getTime());
 });
 
 let then = xhrPromise.then(
@@ -31,13 +31,13 @@ xhrPromise.catch(
 
 xhrPromise.finally(
     () => console.log("resolve") 
-  );
+  ); */
 
- */
 
-// spread  оператор для декларации и вызова функции.
-/* function f(x, y, z, ...a) {
-    console.log(x,y,z,a);
+
+/* // spread  оператор для декларации и вызова функции.
+ function f(x, y, z, ...a) {
+    console.log(x,y,z,a, arguments);
 
     return x + y + z;
 }
@@ -54,9 +54,9 @@ const numbers= [1,2,3,4,5,6];
 
 f(1,2, ...numbers);
 f(1,2,1,2,3,4,5,6);
- */
 
-/*// spread оператор для создания объекта.
+
+// spread оператор для создания объекта.
 
     const student = {name: "Dima", age: "28", major:"programming"};
     const teacher = {name:"Oleg", age: "50", subject: "math"};
@@ -69,11 +69,12 @@ f(1,2,1,2,3,4,5,6);
      const pets = ['cat', 'dog', 'bird', 'fish'];
      const numbers = [1,2,3,4,5,6];
 
-     console.log([...pets, ...numbers]);
+     console.log([...pets, ...numbers]); */
 
-// диструктуризация для массивов.
+
+/* // диструктуризация для массивов.
      const [a,b,c,d] = ['cat', 'dog', 'bird', 'fish'];
-        /* const a = animals[0];
+         const a = animals[0];
         const b = animals[1];
         const c = animals[2];
         const d = animals[3]; 
@@ -85,10 +86,10 @@ f(1,2,1,2,3,4,5,6);
     const [v,, ...other2] = ['cat', 'dog', 'bird', 'fish'];
     
     console.log(v, other2);
-    console.log([v, ...other2]);*/
+    console.log([v, ...other2]);
 
 //диструктуризация для объектов.
-/*
+
 function HeaderComponent ({name, test, ...other}) {
     console.log(name, test, other);
 
@@ -106,11 +107,11 @@ HeaderComponent(obj);
 const name = obj.name;
 const age = obj.age;
 const test = obj.test;
-const house = obj.test.house; */
-
+const house = obj.test.house; */ 
+/*
 //obect.assign
 
-/*var o1 = { a: 1 };
+var o1 = { a: 1 };
 var o2 = { b: 2 };
 var o3 = { c: 3, j: 5, g:44 };
 var o4 = { a: 4 };
@@ -139,6 +140,7 @@ for(let key in o3) {
 console.log(target);
 
 console.log("test2", JSON.stringify(test2, null, 2));
+
 
 //   Методы массивов
 // Добавление/удаление элементов

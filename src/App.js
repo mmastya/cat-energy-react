@@ -4,7 +4,8 @@ import "./App.css";
 import { Main } from "./pages/Main/Main.jsx";
 import { CatalogPage } from "./pages/CatalogPage/CatalogPage.jsx";
 import { Form } from "./pages/Form/Form.jsx";
-import { CounterPage } from "./pages/CounterPage/CounterPage";
+import { PokemonListPage } from "./pages/PokemonListPage/PokemonListPage";
+import { PokemonPage } from "./pages/PokemonPage/PokemonPage";
 
 export function App() {
   return (
@@ -12,7 +13,8 @@ export function App() {
       <Route path="/" exact component={Main} />
       <Route path="/catalog" exact component={CatalogPage} />
       <Route path="/form" component={Form} />
-      <Route path="/counter" component={CounterPage} />
+      <Route path="/pokemonList" component={PokemonListPage} />
+      <Route path="/pokemonPage/:id" component={PokemonPage} />
     </Router>
   );
 }
