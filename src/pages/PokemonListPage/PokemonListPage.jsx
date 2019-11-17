@@ -1,67 +1,36 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useCallback } from "react";
 import Url from "url-parse";
 import { Link } from "react-router-dom";
+import {observer } from "mobx-react-lite";
+import  { pokemonListStore } from "../../stores/pokemonStore";
 
-export function PokemonListPage() {
-  const [isLoad, setLoad] = useState(false);
-  const [list, setList] = useState([]);
-  const [allItems, setAllItems] = useState(0);
-  const [linkForNextList, setNext] = useState(null);
-  const [linkForPreviousList, setPrevious] = useState(null);
+export const PokemonListPage= observer(()=> {
+
+  const {isLoading, count, next, previous, results} = pokemonListStore;
 
   useEffect(() => {
-    setLoad(true);
-
-    fetch("https://pokeapi.co/api/v2/item")
-      .then(response => response.json())
-      .then(({ count, next, previous, results }) => {
-        setAllItems(count);
-        setNext(next);
-        setPrevious(previous);
-        setList(results);
-        setLoad(false);
-      });
+    pokemonListStore.init();
   }, []);
 
   const nextCallback = useCallback(() => {
-    setLoad(true);
-
-    fetch(linkForNextList)
-      .then(response => response.json())
-      .then(({ count, next, previous, results }) => {
-        setAllItems(count);
-        setNext(next);
-        setPrevious(previous);
-        setList(results);
-        setLoad(false);
-      });
-  }, [linkForNextList]);
+    pokemonListStore.nextPage();
+  }, []);
 
   const prevCallback = useCallback(() => {
-    setLoad(true);
-
-    fetch(linkForPreviousList)
-      .then(response => response.json())
-      .then(({ count, next, previous, results }) => {
-        setAllItems(count);
-        setNext(next);
-        setPrevious(previous);
-        setList(results);
-        setLoad(false);
-      });
-  }, [linkForPreviousList]);
+    pokemonListStore.prevPage();
+  }, []);
 
   return (
     <div>
-      {isLoad ? <span>loading...</span> : null}
+      {isLoading ? <span>loading...</span> : null}
       <h1>PokemonListPage</h1>
-      <p>Всего:{allItems}</p>
-      {linkForPreviousList ? (
-        <button onClick={prevCallback} disabled={isLoad}>previous</button>
+      <p>Всего:{count}</p>
+      {previous ? (
+        <button onClick={prevCallback} disabled={isLoading}>previous</button>
       ) : null}
-      {linkForNextList ? <button onClick={nextCallback} disabled={isLoad}>next</button> : null}
+      {next ? <button onClick={nextCallback} disabled={isLoading}>next</button> : null}
       <ul>
-        {list.map(({ url, name }) => {
+        {results.map(({ url, name }) => {
           const { pathname } = new Url(url);
           const pathSplit = pathname.split("/");
           const pokemonId = pathSplit[pathSplit.length - 2];
@@ -74,5 +43,5 @@ export function PokemonListPage() {
         })}
       </ul>
     </div>
-  );
-}
+  )
+})
