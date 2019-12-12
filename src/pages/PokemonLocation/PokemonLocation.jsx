@@ -2,28 +2,29 @@ import React, { useEffect, useCallback } from "react";
 import Url from "url-parse";
 import { Link } from "react-router-dom";
 import { observer } from "mobx-react-lite";
-import { pokemonListStore } from "../../stores/pokemonStore";
+import { pokemonLocationStore } from "../../stores/pokemonLocationStore";
 
-export const PokemonListPage = observer(() => {
-  const { isLoading, count, next, previous, results } = pokemonListStore;
+export const PokemonLocation = observer(() => {
+  const { isLoading, count, next, previous, results } = pokemonLocationStore;
 
   useEffect(() => {
-    pokemonListStore.init();
+    pokemonLocationStore.init();
   }, []);
 
   const nextCallback = useCallback(() => {
-    pokemonListStore.nextPage();
+    pokemonLocationStore.nextPage();
   }, []);
 
   const prevCallback = useCallback(() => {
-    pokemonListStore.prevPage();
+    pokemonLocationStore.prevPage();
   }, []);
+
 
   return (
     <div>
       {isLoading ? <span>loading...</span> : null}
-      <h1>PokemonListPage</h1>
-      <p>Всего:{count}</p>
+      <p>PokemonLocation</p>
+      <span>Всего:{count}</span>
       {previous ? (
         <button onClick={prevCallback} disabled={isLoading}>
           previous
@@ -35,14 +36,14 @@ export const PokemonListPage = observer(() => {
         </button>
       ) : null}
       <ul>
-        {results.map(({ url, name }) => {
+      {results.map(({ url, name }) => {
           const { pathname } = new Url(url);
           const pathSplit = pathname.split("/");
-          const pokemonId = pathSplit[pathSplit.length - 2];
+          const locationId = pathSplit[pathSplit.length - 2];
 
           return (
             <li key={url}>
-              <Link to={`/pokemonPage/${pokemonId}`}>{name}</Link>
+              <Link to={`/pokemonLocationPage/${locationId}`}>{name}</Link>
             </li>
           );
         })}

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navigation.scss";
 import { Link } from "react-router-dom";
 
 export function Navigation(props) {
+
+    const [open, setOpen] = useState(true);
+
+    const handleOpen = () => {
+        setOpen(!open); 
+    }
 
     let normalLinkMain = "site-list__item-link";
     if (props.activeLinkMain) {
@@ -25,8 +31,8 @@ export function Navigation(props) {
     }
 
     return (
-        <nav className="main-nav main-nav--closed main-nav--nojs">
-            <button className="main-nav__toggle" type="button"></button>
+        <nav className={`main-nav ${ open? "main-nav--closed" : "main-nav--opened"}`} >
+            <button className="main-nav__toggle" type="button" onClick={handleOpen}></button>
             <div className="main-nav__wrapper">
                 <ul className="main-nav__list site-list">
                     <li className="site-list__item">

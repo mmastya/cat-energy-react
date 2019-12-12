@@ -6,6 +6,8 @@ import { CatalogPage } from "./pages/CatalogPage/CatalogPage.jsx";
 import { Form } from "./pages/Form/Form.jsx";
 import { PokemonListPage } from "./pages/PokemonListPage/PokemonListPage";
 import { PokemonPage } from "./pages/PokemonPage/PokemonPage";
+import { PokemonLocationPage } from "./pages/PokemonLocationPage/PokemonLocationPage";
+import { PokemonLocation } from "./pages/PokemonLocation/PokemonLocation";
 
 export function App() {
   return (
@@ -15,6 +17,8 @@ export function App() {
       <Route path="/form" component={Form} />
       <Route path="/pokemonList" component={PokemonListPage} />
       <Route path="/pokemonPage/:id" component={PokemonPage} />
+      <Route path="/pokemonLocationPage/:id" component={PokemonLocationPage} />
+      <Route path="/pokemonLocation" component={PokemonLocation} />
     </Router>
   );
 }
