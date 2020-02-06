@@ -19,7 +19,6 @@
   
   .social__link {
     text-decoration: none;
-    fill: #666666;
   
     &:hover {
       fill: #68b738;
@@ -31,7 +30,6 @@
   }
   
   .social__link-facebook {
-    height: 40px;
     margin-top: -4px;
     margin-left: 2px;
   }
@@ -42,7 +40,6 @@
   }
 
   .social__link-vkontakte {
-    height: 40px;
     margin-left: 13px;
   }
   
@@ -55,7 +52,7 @@
   
     .social__list {
       margin-top: 0;
-      padding-top: 20px;
+      padding-top: 28px;
       padding-left: 0;
       padding-bottom: 16px;
       border-bottom: none;
@@ -71,21 +68,21 @@
     }
   
     .social__link-vkontakte {
-      width: 58px;
-      height: 72px;
+      width: 82px;
+      height: 61px;
     }
   
     .social__link-instagram {
-      width: 59px;
-      height: 72px;
-      margin-left: 7px;
+      width: 91px;
+      height: 57px;
+      margin-left: -17px;
     }
   
     .social__link-facebook {
-      width: 89px;
+      width: 68px;
       height: 63px;
-      margin-top: 1px;
-      margin-left: 10px;
+      margin-top: -6px;
+      margin-left: -9px;
     }
   }
   
@@ -95,8 +92,7 @@
     }
   
     .social__list {
-      margin-top: -3px;
-      padding-top: 20px;
+      padding-top: 27px;
       padding-left: 0;
       padding-bottom: 16px;
       border-bottom: none;
